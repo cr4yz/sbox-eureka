@@ -3,6 +3,7 @@ code/accesslist.txt
 Properties
 .intermediate
 tools_asset_info.bin
+tools_thumbnail_cache.bin
 *.csproj
 *.los
 
