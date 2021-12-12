@@ -1,8 +1,8 @@
 ﻿using Sandbox.UI;
 using System.Collections.Generic;
-using Eureka.API;
 using Eureka.Data;
 using System.Threading.Tasks;
+using Eureka.Api;
 
 namespace Eureka.UI;
 
@@ -10,6 +10,6 @@ namespace Eureka.UI;
 internal class ForumList : DynamicList<ForumListSingle, ForumItem>
 {
 
-    protected override async Task<List<ForumItem>> FetchItemsAsync() => await EurekaAPI.FetchForumsAsync();
+    protected override async Task<List<ForumItem>> FetchItemsAsync() => await EurekaApi.FetchForumsAsync();
 
 }
