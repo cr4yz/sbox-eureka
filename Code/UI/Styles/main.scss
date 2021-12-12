@@ -1,0 +1,28 @@
+﻿
+EurekaIndex {
+    color: white;
+    pointer-events: all;
+
+    .body {
+        flex-grow: 1;
+
+        .content {
+            flex-grow: 1;
+        }
+    }
+}
+
+Sidebar {
+    width: 350px;
+    margin-right: 32px;
+    flex-direction: column;
+
+    .button {
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+.hidden {
+    display: none;
+}
