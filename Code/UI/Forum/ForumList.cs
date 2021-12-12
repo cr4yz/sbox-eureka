@@ -10,6 +10,6 @@ namespace Eureka.UI;
 internal class ForumList : DynamicList<ForumListSingle, ForumItem>
 {
 
-    protected override async Task<List<ForumItem>> FetchItemsAsync() => await EurekaApi.FetchForumsAsync();
+    protected override async Task<List<ForumItem>> FetchItemsAsync() => await EurekaApi.Fetch<List<ForumItem>>("forum");
 
 }
