@@ -7,9 +7,9 @@ using Eureka.Api;
 namespace Eureka.UI;
 
 [UseTemplate]
-internal class ForumList : DynamicList<ForumListSingle, ForumItem>
+internal class ForumList : DynamicList<ForumListSingle, Forum>
 {
 
-    protected override async Task<List<ForumItem>> FetchItemsAsync() => await EurekaApi.Fetch<List<ForumItem>>("forum");
+    protected override async Task<List<Forum>> FetchItemsAsync() => await Forum.All();
 
 }

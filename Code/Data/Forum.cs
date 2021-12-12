@@ -1,9 +1,12 @@
 ﻿
+using Eureka.Api;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace Eureka.Data;
 
-internal class ForumItem
+internal class Forum
 {
 
     [JsonPropertyName("id")]
@@ -16,5 +19,7 @@ internal class ForumItem
     public int Topics { get; set; }
     [JsonPropertyName("replies")]
     public int Replies { get; set; }
+
+    public static async Task<List<Forum>> All() => await EurekaApi.Fetch<List<Forum>>("forum");
 
 }
